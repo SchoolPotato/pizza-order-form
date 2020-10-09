@@ -1,0 +1,19 @@
+h1{
+    text-align: center
+}
+fieldset{
+    margin-left: auto;
+    margin-right: auto;
+    width: 8em;
+    background-color: #661B6E;
+}
+textarea{
+    resize: none;
+    background-color: #82378A;
+}
+body{
+    background-image: url('../Images/background.png');
+}
+textarea, legend, label, h1{
+    color: #FFFFFF;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Alex Welton">
+        <meta name="description" content="Pizza Form, for ordering pizza">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pizza Form</title>
+        <link rel="stylesheet" href="CSS/main.css">
+        <link rel="icon" href="Images/icon.png">
+        <script src="JS/main.js"></script>
+    </head>
+    <body>
+        <h1>Welcome to Pizza Place.</h1>
+        <fieldset>
+            <legend>User Information</legend>
+            <label for="name">Username:</label>
+            <input type="text" id="name" name="user.name"><br>
+            <label for="psswd">Password:</label>
+            <input type="password" id="psswd" name="user.psswd">
+            <input type="checkbox" id="showPsswd" onclick="showPsswd()">
+            <label for="showPsswd">Show Password</label><br>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </fieldset>
+        <fieldset>
+            <legend>Drink</legend>
+            <label for="radbutton">What drink do you want?</label><br>
+            <input type="radio" id="coke" name="radbutton" value="Coke" onClick="drinkShow('coke')">
+            <label for="coke">Coke</label><br>
+            <input type="radio" id="dietCoke" name="radbutton" value="Diet Coke" onClick="drinkShow('dietCoke')">
+            <label for="dietCoke">Diet Coke</label><br>
+            <input type="radio" id="sprite" name="radbutton" value="Sprite" onClick="drinkShow('sprite')">
+            <label for="sprite">Sprite</label><br>
+            <input type="radio" id="water" name="radbutton" value="water" onClick="drinkShow('water')">
+            <label for="water">Water</label><br>
+            <input type="radio" id="noDrink" name="radbutton" value="No Drink" onClick="drinkShow('noDrink')">
+            <label for="noDrink">No Drink</label><br>
+            <img id="sodaImage" src="Images/nonexistent.png" style="visibility: hidden; width: 40%; height:40%; margin-left: 28%; margin-right: 50%;">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </fieldset>
+        <fieldset id="toppings">
+            <legend>Toppings Preference</legend>
+            <label for="radbutton2">What pizza do you want?</label><br>
+            <input type="radio" id="Plain" name="radbutton2" onclick="pizzaShow('plain')">
+            <label for="Plain">Plain</label><br>
+            <input type="radio" id="Pepperoni" name="radbutton2" onclick="pizzaShow('pepperoni')">
+            <label for="Pepperoni">Pepperoni</label><br>
+            <input type="radio" id="Meatball" name="radbutton2" onclick="pizzaShow('meatball')">
+            <label for="Meatball">Meatball</label><br>
+            <input type="radio" id="Sausage" name="radbutton2" onclick="pizzaShow('sausage')">
+            <label for="Sausage">Sausage</label><br>
+            <input type="radio" id="noPizza" name="radbutton2" onclick="pizzaShow('noPizza')">
+            <label for="noPizza">No Pizza</label>
+            <img id="pizzaImage" src="Images/nopizza.png" style="visibility: hidden; height: 95%; width: 95%;">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </fieldset>
+        <fieldset>
+            <legend>Special Instructions</legend>
+            <label for="instructions">Instructions</label><br>
+            <textarea id="instructions" name="user.instructions" cols="32" rows="12"></textarea>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </fieldset>
+        <fieldset>
+            <legend>Credit Card Information</legend>
+            <select name="Credit Cards" id="cardSelect">
+                <option value="V">Visa</option>
+                <option value="MC">Master Card</option>
+                <option value="AE">American Express</option>
+                <option value="D">Discover</option>
+            </select>
+            <br><br>
+            <label for="CardNumber">Card Number</label>
+            <input type="text" id="CardNumber" name="CardNumber" maxlength="16"><br><br>
+            <label for="SecurityNumber">Security Code</label>
+            <input type="text" id="SecurityNumber" name="SecurityNumber" maxlength="3"><br><br>
+            <label for="expirationdate" id="dt2" name="expirationdate">Expiration Date</label>
+            <input type="date" id="dt2" name="expirationdate">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </fieldset>
+    </body>
+</html>
